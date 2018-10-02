@@ -13,7 +13,7 @@ html {
     color: #555;
 }
 
-nav {
+ul, nav {
     /* to remove bullets points */
     list-style: none;
 }
@@ -38,11 +38,45 @@ a.btn {
     opacity: 1;
 }
 
+.grid {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+hr {
+    width: 250px;
+    height: 3px;
+    background-color: #3f51b5;
+    border: 0;
+    margin-bottom: 50px;
+}
+
+section h3.title {
+    text-transform: uppercase;
+    font: bold 32px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section p {
+    max-width: 775px;
+    line-height: 2;
+    padding: 0 20px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
 section {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 100px 80px;
+}
+
+section:not(.hero):nth-child(even) {
+    background-color: #f5f5f5;
 }
 
 /* header styles */
@@ -125,4 +159,40 @@ header nav li {
         opacity: 1;
         margin-top: 0;
     }
+}
+
+/* destination section */
+
+.destinations .grid li {
+    height: 350px;
+    padding: 20px;
+    /* so the image doesnt cover the padding area */
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+}
+
+.destinations .grid li.large {
+    flex-basis: 70%;
+}
+
+.destinations .grid li.small {
+    flex-basis: 30%;
+}
+
+/* packages section*/
+
+.packages .grid li {
+    padding: 50px;
+    flex-basis: 50%;
+    text-align: center;
+}
+
+.packages .grid li i {
+    color: #8c9eff;
+}
+
+.packages .grid li h4 {
+    font-size:30px;
+    margin: 25px 0;
 }
