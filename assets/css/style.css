@@ -96,7 +96,8 @@ header {
     animation: 1s fadein 0.5s forwards;
     opacity: 0;
     color: white;
-    /* fixes the not clickable header tags the default value is auto  */
+    /* fixes the not clickable header tags..the background image z index is -1 ... the default value of header is auto 
+    so we have to set it to 1 so it will be clickble ..if you set it to 0 it doesn t work ...why ?? idk  */
     z-index: 1;
 }
 
@@ -153,7 +154,7 @@ header nav li {
 
 .hero h1 {
     font: bold 60px "Open Sans", sans-serif;
-    /* margin-bottom: 15px; */
+    margin-bottom: 15px;
 }
 
 .hero h3 {
